@@ -3,12 +3,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const captureButton = document.getElementById('capture-button');
     const canvas = document.getElementById('canvas');
 
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(stream => {
-            video.srcObject = stream;
-            video.play();
-        })
-        .catch(err => console.error("Error accessing camera:", err));
+    // navigator.mediaDevices.getUserMedia({ video: true })
+    //     .then(stream => {
+    //         video.srcObject = stream;
+    //         video.play();
+    //     })
+    //     .catch(err => console.error("Error accessing camera:", err));
+
+    navigator.mediaDevices.getUserMedia({
+        video: {
+            facingMode: {
+                exact: 'environment'
+            }
+        }
+    })
+    .then(stream => {
+        video.srcObject = stream;
+        video.play();
+    })
+    .catch(err => console.error("Error accessing camera:", err));
 
     captureButton.addEventListener('click', function() {
         canvas.width = video.videoWidth;
