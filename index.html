@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="scanner-container"></div>
+    <video id="video" width="640" height="480"></video>
+    <button id="capture-button">Capture Image</button>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <script src="https://unpkg.com/quagga@0.12.0/dist/quagga.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/barcode-scanner.js"></script>
+</body>
+</html>

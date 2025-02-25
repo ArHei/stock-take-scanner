@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#scanner-container {
+    width: 640px;
+    height: 480px;
+    border: 1px solid black;
+}
+
+video {
+    border: 1px solid black;
+}
